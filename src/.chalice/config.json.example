@@ -1,0 +1,21 @@
+{
+  "version": "2.0",
+  "app_name": "aws-chalice-python-3.9",
+  "environment_variables": {
+    "MYSQL_USER": "root",
+    "MYSQL_PASSWORD": "123456",
+    "MYSQL_HOST": "mysql",
+    "MYSQL_PORT": "3306",
+    "MYSQL_DB_NAME": "sytem",
+    "SQS_NAME": "sqs-routes",
+    "SQS_REGION": "us-east-1",
+    "SQS_URL": "https://sqs.us-east-1.amazonaws.com/123456789012/sqs-routes",
+    "MEDIACODE_API_URL": "https://system-code.com",
+    "ZIPCODE_API_URL": "https://system-zipcode.com"
+  },
+  "stages": {
+    "dev": {
+      "api_gateway_stage": "api"
+    }
+  }
+}

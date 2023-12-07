@@ -1,0 +1,36 @@
+{
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::912846608431:role/atalaya-routes-prod",
+      "role_name": "atalaya-routes-prod"
+    },
+    {
+      "name": "sqs_save_log",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-west-2:912846608431:function:atalaya-routes-prod-sqs_save_log"
+    },
+    {
+      "name": "sqs_save_log-sqs-event-source",
+      "resource_type": "sqs_event",
+      "queue_arn": "arn:aws:sqs:us-west-2:912846608431:zatanna-sqs-atalaya_logs",
+      "event_uuid": "1643e9ec-f761-4957-8630-d91ea3772790",
+      "queue": "zatanna-sqs-atalaya_logs",
+      "lambda_arn": "arn:aws:lambda:us-west-2:912846608431:function:atalaya-routes-prod-sqs_save_log"
+    },
+    {
+      "name": "api_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-west-2:912846608431:function:atalaya-routes-prod"
+    },
+    {
+      "name": "rest_api",
+      "resource_type": "rest_api",
+      "rest_api_id": "yzynb0b921",
+      "rest_api_url": "https://yzynb0b921.execute-api.us-west-2.amazonaws.com/api/"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}

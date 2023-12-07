@@ -1,0 +1,36 @@
+{
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::912846608431:role/zatanna_sqs-queries-dev",
+      "role_name": "atalaya-routes-dev"
+    },
+    {
+      "name": "sqs_save_log",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:sa-east-1:912846608431:function:atalaya-routes-dev-sqs_save_log"
+    },
+    {
+      "name": "sqs_save_log-sqs-event-source",
+      "resource_type": "sqs_event",
+      "queue_arn": "arn:aws:sqs:sa-east-1:912846608431:zatanna-sqs-atalaya_logs-dev",
+      "event_uuid": "cd0e0b15-ddbe-444f-9030-4ba4854d9cb4",
+      "queue": "zatanna-sqs-atalaya_logs-dev",
+      "lambda_arn": "arn:aws:lambda:sa-east-1:912846608431:function:atalaya-routes-dev-sqs_save_log"
+    },
+    {
+      "name": "api_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:sa-east-1:912846608431:function:atalaya-routes-dev"
+    },
+    {
+      "name": "rest_api",
+      "resource_type": "rest_api",
+      "rest_api_id": "e1re5f1hva",
+      "rest_api_url": "https://e1re5f1hva.execute-api.sa-east-1.amazonaws.com/api/"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}
